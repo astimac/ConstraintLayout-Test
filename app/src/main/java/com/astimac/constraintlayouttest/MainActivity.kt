@@ -1,5 +1,6 @@
 package com.astimac.constraintlayouttest
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         constraintLayout = findViewById(R.id.constraint_layout)
         constraintSet.clone(constraintLayout)
         constraintSetOriginal.clone(constraintLayout)
+
+        startActivity(Intent(this, ConstraintExample1Activity::class.java))
     }
 
     fun onViewClick(v : View) {
